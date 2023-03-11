@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 import 'widgets/kotak_warna.dart';
@@ -7,6 +9,14 @@ void main(List<String> args) {
 }
 
 class MyApp extends StatelessWidget {
+  List<Map<String, dynamic>> data = List.generate(
+      10,
+      (index) => {
+            "judul": "Kotak - ${index + 1}",
+            "color": Color.fromARGB(255, 100 + Random().nextInt(255),
+                100 + Random().nextInt(255), 100 + Random().nextInt(255)),
+          });
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,24 +29,9 @@ class MyApp extends StatelessWidget {
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Column(
-            children: [
-              KotakWarna(
-                judul: "Merah",
-                warna: Colors.red,
-              ),
-              KotakWarna(
-                judul: "Kuning",
-                warna: Colors.yellow,
-              ),
-              KotakWarna(
-                judul: "Hijau",
-                warna: Colors.green,
-              ),
-              KotakWarna(
-                judul: "Hijau",
-                warna: Colors.yellow,
-              ),
-            ],
+            children: data
+                .map((e) => KotakWarna(judul: e["judul"], warna: e["color"]))
+                .toList(),
           ),
         ),
       ),
