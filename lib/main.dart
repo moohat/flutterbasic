@@ -11,35 +11,98 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text("Judul"),
+          centerTitle: true,
           backgroundColor: Colors.deepPurple,
         ),
-        body: Column(
-          children: [
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.amber,
-              child: Text("Halo"),
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.amber,
-              child: Text("Halo"),
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.amber,
-              child: Text("Halo"),
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.amber,
-              child: Text("Halo"),
-            ),
-          ],
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.amber,
+                  child: Center(
+                    child: Text("Hallo"),
+                  )),
+              Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.red,
+                  child: Center(
+                    child: Text("Hallo"),
+                  )),
+              Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.green,
+                  child: Center(
+                    child: Text("Hallo"),
+                  )),
+              Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.amber,
+                  child: Center(
+                    child: Text("Hallo"),
+                  )),
+              Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.red,
+                  child: Center(
+                    child: Text("Hallo"),
+                  )),
+              Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.green,
+                  child: Center(
+                    child: Text("Hallo"),
+                  )),
+              Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.amber,
+                  child: Center(
+                    child: Text("Hallo"),
+                  )),
+              Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.red,
+                  child: Center(
+                    child: Text("Hallo"),
+                  )),
+              Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.green,
+                  child: Center(
+                    child: Text("Hallo"),
+                  )),
+              Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.amber,
+                  child: Center(
+                    child: Text("Hallo"),
+                  )),
+              Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.red,
+                  child: Center(
+                    child: Text("Hallo"),
+                  )),
+              Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.green,
+                  child: Center(
+                    child: Text("Hallo"),
+                  )),
+            ],
+          ),
         ),
       ),
     );
