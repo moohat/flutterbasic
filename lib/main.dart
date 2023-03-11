@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() {
+import 'widgets/kotak_warna.dart';
+
+void main(List<String> args) {
   runApp(MyApp());
 }
 
@@ -10,138 +12,32 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Judul"),
+          title: Text("Extract Widget"),
           centerTitle: true,
-          backgroundColor: Colors.deepPurple,
+          backgroundColor: Colors.indigo,
         ),
-        body: GridView(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3, crossAxisSpacing: 10, mainAxisSpacing: 10),
-          padding: EdgeInsets.only(top: 10),
-          // mainAxisAlignment: MainAxisAlignment.center,
-          // crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              width: 200,
-              height: 200,
-              color: Colors.amber,
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.red,
-            ),
-            Container(
-                width: 100,
-                height: 100,
-                color: Colors.green,
-                child: Center(
-                  child: Text("Hallo"),
-                )),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.purpleAccent,
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.red,
-            ),
-            Container(
-                width: 100,
-                height: 100,
-                color: Colors.green,
-                child: Center(
-                  child: Text("Hallo"),
-                )),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.amber,
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.red,
-            ),
-            Container(
-                width: 100,
-                height: 100,
-                color: Colors.green,
-                child: Center(
-                  child: Text("Hallo"),
-                )),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.amber,
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.red,
-            ),
-            Container(
-                width: 100,
-                height: 100,
-                color: Colors.green,
-                child: Center(
-                  child: Text("Hallo"),
-                )),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.amber,
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.red,
-            ),
-            Container(
-                width: 100,
-                height: 100,
-                color: Colors.green,
-                child: Center(
-                  child: Text("Hallo"),
-                )),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.amber,
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.red,
-            ),
-            Container(
-                width: 100,
-                height: 100,
-                color: Colors.green,
-                child: Center(
-                  child: Text("Hallo"),
-                )),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.amber,
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.red,
-            ),
-            Container(
-                width: 100,
-                height: 100,
-                color: Colors.green,
-                child: Center(
-                  child: Text("Hallo"),
-                )),
-          ],
-          // ),
+        body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            children: [
+              KotakWarna(
+                judul: "Merah",
+                warna: Colors.red,
+              ),
+              KotakWarna(
+                judul: "Kuning",
+                warna: Colors.yellow,
+              ),
+              KotakWarna(
+                judul: "Hijau",
+                warna: Colors.green,
+              ),
+              KotakWarna(
+                judul: "Hijau",
+                warna: Colors.yellow,
+              ),
+            ],
+          ),
         ),
       ),
     );
