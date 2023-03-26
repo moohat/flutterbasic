@@ -1,40 +1,40 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-
-import 'widgets/kotak_warna.dart';
+import './widgets/soal_1.dart';
+import './widgets/soal_2.dart';
+import './widgets/soal_3.dart';
+import './widgets/soal_4.dart';
+import './widgets/soal_5.dart';
+import './widgets/soal_6.dart';
+import './widgets/soal_7.dart';
+import './widgets/soal_8.dart';
+import './widgets/soal_9.dart';
+import './widgets/soal_10.dart';
+import './widgets/soal_11.dart';
+import './widgets/soal_12.dart';
+import './widgets/soal_13.dart';
+import './widgets/soal_14.dart';
+import './widgets/soal_15.dart';
+import './widgets/soal_16.dart';
+import './widgets/soal_17.dart';
+import './widgets/soal_18.dart';
+import './widgets/soal_19.dart';
+import './widgets/soal_20.dart';
+import './widgets/soal_21.dart';
+import './widgets/soal_22.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  List<Map<String, dynamic>> data = List.generate(
-      10,
-      (index) => {
-            "judul": "Kotak - ${index + 1}",
-            "color": Color.fromARGB(255, 100 + Random().nextInt(255),
-                100 + Random().nextInt(255), 100 + Random().nextInt(255)),
-          });
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Extract Widget"),
-          centerTitle: true,
-          backgroundColor: Colors.indigo,
-        ),
-        body: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Column(
-            children: data
-                .map((e) => KotakWarna(judul: e["judul"], warna: e["color"]))
-                .toList(),
-          ),
-        ),
-      ),
+      //menghilangkan label debug di emulator
+      debugShowCheckedModeBanner: false,
+      home: Soal22(),
     );
   }
 }
