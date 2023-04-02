@@ -11,9 +11,9 @@ class Soal26 extends StatelessWidget {
             "Minggu Ini",
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
-          backgroundColor: Colors.black45,
+          backgroundColor: Color(0xFF2C3333), // Will work
         ),
-        backgroundColor: Colors.black45,
+        backgroundColor: Color(0xFF2C3333),
         body: Column(
           children: [
             Padding(
