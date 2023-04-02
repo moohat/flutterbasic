@@ -24,6 +24,7 @@ import './widgets/soal_22.dart';
 import './widgets/soal_23.dart';
 import './widgets/soal_24.dart';
 import './widgets/soal_25.dart';
+import './widgets/Soal_26.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
       //menghilangkan label debug di emulator
       debugShowCheckedModeBanner: false,
 
-      home: Soal25(),
+      home: Soal26(),
     );
   }
 }

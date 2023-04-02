@@ -11,8 +11,9 @@ class Soal25 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("soal No 2"),
+        title: Text("soal No 25"),
       ),
+      backgroundColor: Colors.amber[100],
       body: Center(
         child: Container(
           child: Column(
